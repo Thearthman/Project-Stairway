@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/2-work/personal/learning-obsidian/la-tex/","tags":["gardenEntry"]}
+{"dg-publish":true,"permalink":"/2-work/personal/learning-obsidian/la-tex/"}
 ---
 
 
