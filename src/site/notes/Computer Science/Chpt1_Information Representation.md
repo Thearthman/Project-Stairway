@@ -21,7 +21,6 @@ For example, *300* have a digit of *3* in *$10^2$ place*
 > [!definition]
 A bit is a binary digit in base-2/binary system that's representated using 0 or 1.
 
-
 ## Denary
 
 >[!definition]
@@ -174,7 +173,7 @@ Using *4 bits* (because 3 ins't enough for 10 digits) to represent the each of t
 +\;3\;2\;5& \\
 \hline
 1\;1\;1\;1\\
-\text{equivalent to}\hspace{10cm}\\
+\text{equivalent to}\hspace{6cm}\\
 0111\;1000\;0110& \\
 +\;0011\;0010\;0101& \\
 \hline 
