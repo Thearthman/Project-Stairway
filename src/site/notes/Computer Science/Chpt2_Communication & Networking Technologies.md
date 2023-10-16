@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/computer-science/chpt2-communication-and-networking-technologies/"}
+{"dg-publish":true,"permalink":"/Computer Science/Chpt2_Communication & Networking Technologies/"}
 ---
 
 
