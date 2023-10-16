@@ -188,11 +188,7 @@ In summary, the data from a LAN to a WAN goes through both the router and the ga
 > 1. A **node**: *device* on LAN
 > 2. **Medium**: cable, [[Computer Science/Chpt2_Communication & Networking Technologies#2.03 Transmission media\|transmission media]]
 > 3. **Frame**: a format the data is send, a frame. (source + destination address)
-
-
-
   
-
 ## Carrier Sence Multiple Access with Collision Detection | CSMA/CD
 When *two* **message** are sent using the *same* **channel**, a **collision** happens.
 In Simple terms, CSMA/CD keep detecting collision, and when happens, stops transmission and sends a jam signal. Wait for a set time and resend the frame.
