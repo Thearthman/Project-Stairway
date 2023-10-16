@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/learning-obsidian/tasks/"}
+{"dg-publish":true,"permalink":"/Learning Obsidian/Tasks/"}
 ---
 
 
