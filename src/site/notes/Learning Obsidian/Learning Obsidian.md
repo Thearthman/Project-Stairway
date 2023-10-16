@@ -34,7 +34,7 @@ This is about Tasks Plugin
 
 
 
-### `Waypoint
+### `Waypoint`
 
 - [[Learning Obsidian/Dataview\|Dataview]]
 - [[Learning Obsidian/HTML\|HTML]]
