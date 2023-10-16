@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/learning-obsidian/markdown-format/"}
+{"dg-publish":true,"permalink":"/Learning Obsidian/Markdown format/"}
 ---
 
 
