@@ -7,7 +7,7 @@
 
 ## Place Value
 
-``` ad-def
+```
 The *value* that a *specific place* in the number system refers to. 
 For example, *300* have a place value of *$10^2$*
 ```
@@ -34,27 +34,25 @@ Denary is written with 10 symbols:0,1,2,3,4,5,6,7,8,9.
 
 ### **Conversion**
 
-1.  \[\[Chpt1_Information Representation#Binary\|Binary\]\] to \[\[Chpt1_Information Representation#Denary\|Denary\]\]: *Successive devision*
-    \#### *Successive Devision*
+1.  [[Computer Science/Chpt1_Information Representation#Binary\|Binary]] to [[Computer Science/Chpt1_Information Representation#Denary\|Denary]]: *Successive devision*
+#### *Successive Devision*
 
-``` ad-def
-
-$$\begin{align}
-52\div 2&=26\dots 0 \\
-26\div 2&=12\dots 0 \\
-13\div 2&=6\dots 1 \\
-6\div 2&=3\dots 0 \\
-3\div 2&=1\dots 1 \\
-1\div 2&=0\dots 1 \\
-0\div 2&=0\dots 0
-\end{align}$$
-```
+>[!example] Example of Succesive Devision
+>$$\begin{align}
+>52\div 2&=26\dots 0 \\
+>26\div 2&=12\dots 0 \\
+>13\div 2&=6\dots 1 \\
+>6\div 2&=3\dots 0 \\
+>3\div 2&=1\dots 1 \\
+>1\div 2&=0\dots 1 \\
+>0\div 2&=0\dots 0
+>\end{align}$$
 
 2.  Binary to Denary: *Successive Multiplication*
-    \#### *Succesive Multiplication*
+#### *Succesive Multiplication*
 
-``` ad-def
-$$
+>[!example] Example of Succesive Multiplication
+>$$
 \begin{align} 
 & &\to1\times 2=2 \\
 \hline
@@ -71,18 +69,18 @@ $$
 25\times 2 =50
 \end{align}
 $$
-```
+
 
 ## Hexadecimal
 
 ### **Conversion**
 
-Denary to Hexadecimal: \[\[Chpt1_Information Representation#*Successive Devision*\| Successive devision\]\] works
+Denary to Hexadecimal: [[Computer Science/Chpt1_Information Representation#*Successive Devision*\|Successive devision]] works
 Binary to Hexadecimal: too ez
 Hexadecimal to Denary: \[\[Chpt1_Information Representation#*Succesive Multiplication*\| Successive multiplication\]\] works, replace
 Hexadecimal to Binary: too ez
 \## EQ
-\![\[Screenshot 2023-09-04 at 10.22.43.png\]\]
+![[Screenshot 2023-09-04 at 10.22.43.png\|Screenshot 2023-09-04 at 10.22.43.png]]
 $$
 \begin{align} 
 46\div 2&=23\dots_{0} \\
@@ -94,7 +92,7 @@ $$
 &=0101100
 \end{align}
 $$
-\![\[Screenshot 2023-09-04 at 10.23.40.png\]\]
+![[Screenshot 2023-09-04 at 10.23.40.png\|Screenshot 2023-09-04 at 10.23.40.png]]
 i.
 $$
 \begin{align}
@@ -117,8 +115,8 @@ $$
 \end{align}
 $$
 \## Quiz
-\[\[1.1.\_Number_Systems_Quiz\_.pdf\]\]
-\[\[IMG_9986 1.pdf\| Answer\]\]
+[[1.1._Number_Systems_Quiz_.pdf\|1.1._Number_Systems_Quiz_.pdf]]
+[[IMG_9986 1.pdf\| Answer]]
 
 # 1.02 Numbers and Quantities
 
