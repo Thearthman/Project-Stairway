@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/learning-obsidian/learning-obsidian/","tags":["gardenEntry"]}
+{"dg-publish":true,"permalink":"/learning-obsidian/learning-obsidian/"}
 ---
 
 
