@@ -3,3 +3,13 @@
 ---
 
 # Homepage
+
+
+
+
+
+
+### Way Point
+[[Learning Obsidian/Learning Obsidian\|Learning Obsidian]]
+
+
