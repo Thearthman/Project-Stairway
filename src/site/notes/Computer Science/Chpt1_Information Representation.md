@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/computer-science/chpt1-information-representation/"}
+{"dg-publish":true,"permalink":"/Computer Science/Chpt1_Information Representation/"}
 ---
 
 
