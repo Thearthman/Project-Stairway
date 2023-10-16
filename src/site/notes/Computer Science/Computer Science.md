@@ -5,4 +5,4 @@
 
 # [[Computer Science/Chpt1_Information Representation\|Chpt1_Information Representation]]
 
-# [[Chpt2\|Chpt2]]
+# [[Computer Science/Chpt2_Communication & Networking Technologies\|Chpt2_Communication & Networking Technologies]]
