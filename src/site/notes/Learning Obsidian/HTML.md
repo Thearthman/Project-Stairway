@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/learning-obsidian/html/"}
+{"dg-publish":true,"permalink":"/Learning Obsidian/HTML/"}
 ---
 
 
