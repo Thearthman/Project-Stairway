@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/learning-obsidian/la-tex/"}
+{"dg-publish":true,"permalink":"/Learning Obsidian/LaTex/"}
 ---
 
 
