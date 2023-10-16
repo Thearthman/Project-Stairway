@@ -72,7 +72,7 @@ Binary to Hexadecimal: too ez
 Hexadecimal to Denary: [[Computer Science/Chpt1_Information Representation#*Succesive Multiplication*\| Successive multiplication]] works, replace
 Hexadecimal to Binary: too ez
 ## EQ  
-![[Screenshot 2023-09-04 at 10.22.43.png\|Screenshot 2023-09-04 at 10.22.43.png]]
+![Screenshot 2023-09-04 at 10.22.43.png](/img/user/Attachments/Screenshot%202023-09-04%20at%2010.22.43.png)
   
 $$
 \begin{align} 
@@ -85,7 +85,7 @@ $$
 &=0101100
 \end{align}
 $$
-![[Screenshot 2023-09-04 at 10.23.40.png\|Screenshot 2023-09-04 at 10.23.40.png]]
+![Screenshot 2023-09-04 at 10.23.40.png](/img/user/Attachments/Screenshot%202023-09-04%20at%2010.23.40.png)
 i.  
 $$
 \begin{align}
@@ -108,7 +108,7 @@ $$
 \end{align}
 $$
 ## Quiz
-[[1.1._Number_Systems_Quiz_.pdf\|1.1._Number_Systems_Quiz_.pdf]]
+[[1.1._Number_Systems_Quiz_.pdf]]
 [[IMG_9986 1.pdf\| Answer]]
 
 # 1.02 Numbers and Quantities
