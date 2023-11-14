@@ -12,9 +12,7 @@
 It's a **network** that connects computing devices within a *limited geographical* *area* (like a building, company). **Typically** have a *higher* **transmission** rate (bandwidth), and connects to *workstations, [[Computer Science/Chpt2_Communication and Networking Technologies#Switch vs. Hub\|swtiches]], [[Computer Science/Chpt2_Communication and Networking Technologies#Wireless Lans WLANs\|acess points]]*, share resoureces like papers, files. **Cost** is usuallly *lower*.
 - Wired: WiFi, Bluetooth
 - Wried: Ethernet.
-  
-[Local Area Network](#local-area-network-lan)  
-[[local-area-network-lan]]  
+   
   
 ### Wireless Lans | WLANs
 Wireless Lans which **needs** *WAPs* `(Wirelss access points)` to communicate.
