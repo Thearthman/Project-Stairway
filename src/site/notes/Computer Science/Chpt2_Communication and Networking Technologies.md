@@ -9,11 +9,9 @@
   
 ## Local Area Network | LAN  
 > [!definition]
-It's a **network** that connects computing devices within a *limited geographical* *area* (like a building, company). **Typically** have a *higher* **transmission** rate (bandwidth), and connects to *workstations, [[Computer Science/Chpt2_Communication and Networking Technologies#Switch vs. Hub\|swtiches]], [[Computer Science/Chpt2_Communication and Networking Technologies#Wireless Lans WLANs\|acess points]]*, share resoureces like papers, files. **Cost** is usuallly *lower*.
-- Wired: WiFi, Bluetooth
-- Wried: Ethernet.
-   
-  
+> It's a **network** that connects computing devices within a *limited geographical* *area* (like a building, company). **Typically** have a *higher* **transmission** rate (bandwidth), and connects to *workstations, [Switches](#switch-vs-hub), [access points](#wireless-lans-wla-ns)*, share resoureces like papers, files. **Cost** is usuallly *lower*.
+> - Wired: WiFi, Bluetooth
+> - Wried: Ethernet.
 ### Wireless Lans | WLANs
 Wireless Lans which **needs** *WAPs* `(Wirelss access points)` to communicate.
 **Access Points**: Like WiFi, it's a device that **gives** *wireless* *access* to the **network**.
@@ -38,25 +36,8 @@ Wireless Lans which **needs** *WAPs* `(Wirelss access points)` to communicate.
 |Security|Requires robust security|Typically more secure|
 |Cost|More expensive to set up and maintain|Cost-effective for local use|
 |Examples|Internet, leased lines, MPLS|Home networks, office networks|
-
-## *P2P* Vs. *Server-Client*
-| Feature/Aspect        | Client-Server Model                                                                    | Peer-to-Peer Model                                                                                   |
-| --------------------- | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| Basic Functionality   | Client sends a request to the server; server sends back the requested data.            | each node acts as server and client. Sends and receives data.                                        |
-| Dedicated Servers     | A central server exist. Controls and handles everything.                               | No central server; each node can act as both a server and a client.                                  |
-| Data Storage          | Centralized on dedicated servers.                                                      | every node has their own file.                                                                       |
-| Access Control        | Server dictates access; central security databases control access to shared resources. | each node has equal status.                                                                          |
-| Software Installation | is done through the central server. Update will cause influence to all clients.        | Installation is done independently. Updates are done independently.                                  |
-| Security              | Greater security; requires user IDs and passwords.                                     | it's decentrailized. Harder to mainain security.                                                     |
-| Scalability           | depends on server compacity, can be great.                                             | Suitable for networks with no more than 10 nodes.                                                    |
-| System Stability      | More stable; nightly backups can restore deleted resources.                            | single note failure doesn't effect overall ability.                                                  |
-| Potential Issues      | Can become bottlenecked with many client requests.                                     | Performance and management issues with more than 10 nodes.                                           |
-| File Sharing          | Central file server allows sharing without offline devices.                            | allow nodes to be offline. File sharing happen between nodes.                                        |
-| Examples of Use       | Large companies like Amazon with a need for controlled access and good security.       | Small businesses with frequent user interaction and no need for robust security.                     |
-| Advantage             | more centralized, can be controlled/updated relatively easily.                         | no central server, not prone to overload. Files can be shared easily; easier to maintain the system. |
-| Disadvantage          | Can be overloaded; service will be stoped once the central server is down;             | Update requires every node to update clients. Harder to maintain security.                           |
-
-
+  
+  
 # 2.02 Network topologies
 ## Casting system
 **Unicast**: only one to *one* connection.
@@ -69,10 +50,10 @@ Easy as it seems.
 ![Pasted image 20230925095654.png](/img/user/Attachments/Pasted%20image%2020230925095654.png)
 > [!definition]
 **Terminators** on each ends, all computers connects in the same line.
-Only able to [[Computer Science/Chpt2_Communication and Networking Technologies#Casting system\|BROADCAST]]
+Only able to [BROADCAST](#casting-system)
   
 ***Advantages***: Easy to expand, low cost, little cabling, not secure.
-***Disadvantages***: Need to avoid **data collision** through [[Computer Science/Chpt2_Communication and Networking Technologies#Carrier Sence Multiple Access with Collision Detection CSMA/CD\|CSMA/CD]]. if wire is broken, all connections are lost.
+***Disadvantages***: Need to avoid **data collision** through [CSMA/CD](). if wire is broken, all connections are lost.
 ### Terminators
 Devices that's used to *prevent* **signal reflection** (**rebounce**).
 
@@ -95,20 +76,44 @@ Able to do all *three* Casting Way
 ***Disadvantages***: relatively expensive, requires a central device.
 
 ## Ring
-![[Drawing 2023-09-25 14.53.00.excalidraw\|Drawing 2023-09-25 14.53.00.excalidraw]]
+![Pasted image 20231114131736.png](/img/user/Attachments/Pasted%20image%2020231114131736.png)
 > [!definition]
 It goes in a ring. Like a bus, if one connection is lost, all connection are down.
-  
 
 ## Hybrid
 ![Pasted image 20230925145807.png](/img/user/Attachments/Pasted%20image%2020230925145807.png)
-
-
+  
+  
+## Client-Server Model
+> [!def] 
+> **Client** send a *request* to the **server**; **server** *sends back* the requested **data**.
+> **Central server** *control* and *handles* everything `(not for Thick Clients)`.
+> *Data* is stored on **servers**.
+### Thick Clients  
+**Clients** perform most of the *computing* on their *own*.  
+**Server** does *minimum* computing.  
+### Thin Clients  
+**Server** perform most of the *computing*.  
+**Clients** does *minimum* computing for *themselves*.  
+### Disadvantages | Server Reliant & Overload
+**Update** will cause *influence* to all **clients**.
+Can become *bottlenecked* with **many** client **requests**.
+**Service** will *stop* once server's **overloaded**.
+  
+## Peer-to-Peer  
+> [!def]
+> Each **node** *acts* as **server** and **clients**.
+> *No* **central server**.
+> Each node has **equal status** regarding of access control.
+> *Suitable* for networks with **no more** than **10 nodes**.
+### Disadvantages | Security & Scale
+it's decentrailized. Harder to mainain security.
+Update requires every node to update clients. Harder to maintain security.
 
 # 2.03 Transmission media
-## Copper based
-### UTP
-Un-shielded Twisted Pair
+## *Copper* based
+### UTP | Un-shielded Twisted Pair
+As the name suggested, UTP is Un-shielded. Prone to interfere.
 *Properties*: 8 wires, **categories** `(higher the better)`, *150m max*. **LAN**
 ### Co-axial
 Compare to **UTP**, **Co-axial** is *Shielded*
@@ -124,13 +129,17 @@ Transmits in *light* *pulses*
 *Less* likely to have *interference*
 
 ## Satellites
-Large range of wavelengths: *Microwave* or *Radio wave* 
+*Large* range of **wavelengths**: *Microwave* or *Radio wave* 
+### Satellite Earth Orbits
+G`eostationary`EO: *distant* **telephone** and **computer**network *communication*.  
+M`edium`EO: Used for **GPS**.  
+L`ow`EO: Used by **mobile** **network**.  
 
 # 2.04 LAN hardware
 ## Switch vs. Hub
 ![IMG_0689.jpg|300](/img/user/Attachments/IMG_0689.jpg) 
 **Switch** can create *logical* *connection* inside itself, *Full-Duplex Connections* (like an inner point to point connection). See in the figure above.
-**Hub** is like [[Computer Science/Chpt2_Communication and Networking Technologies#Bus\|bus]], uses same port, **Vulnerable** to *Data Collision*. Only able to *Broadcast!!!*
+**Hub** is like [bus](#bus), uses same port, **Vulnerable** to *Data Collision*. Only able to *Broadcast!!!*
 So the **Switch** is more *secure* and more *efficient*.
 
 ## Repeater
@@ -152,9 +161,9 @@ Deals with *Local*. *Small-scale* network.
 
 ## Modem
 *Converts* **digital** signals to **analogue** data.
-Usually combined inside the [[Computer Science/Chpt2_Communication and Networking Technologies#Router\|Router]]
+Usually combined inside the [Router](#Router)
 
-## Bridge Vs. Gateway Vs. [[Computer Science/Chpt2_Communication and Networking Technologies#Router\|Router]]
+## Bridge Vs. Gateway Vs. [Router](#Router)
 |Device|Job/Function|Scope|Example Use Case|
 |---|---|---|---|
 |Bridge|Connects LAN segments within the same network.|Extends a LAN by connecting segments.|Connecting two buildings in a campus.|
@@ -175,8 +184,6 @@ Usually combined inside the [[Computer Science/Chpt2_Communication and Networkin
 In summary, the data from a LAN to a WAN goes through both the router and the gateway. The router determines if the data should be sent outside the LAN, and the gateway facilitates the connection between the LAN and the WAN.
 ### Local Network | *Necessary Servers*
 1. DNS: *translation* between domain and IP address
-{ #457651}
-
 2. DHCP: Dynamic **Local** **IP** *distribution*
 3. **NAT**: Packaging servers, they remember which *local IP* **requested** which *external* *IP* with its **request**, they when external IP’s server responds, it sends the information back to the corresponding local IP.
 ![Pasted image 20231019111203.png](/img/user/Attachments/Pasted%20image%2020231019111203.png)
@@ -186,7 +193,7 @@ In summary, the data from a LAN to a WAN goes through both the router and the ga
 > A *protocal* used by many *wired* **LANs**.
 > Made up of
 > 1. A **node**: *device* on LAN
-> 2. **Medium**: cable, [[Computer Science/Chpt2_Communication and Networking Technologies#2.03 Transmission media\|transmission media]]
+> 2. **Medium**: cable, [Transmission Media](#2-03-transmission-media)
 > 3. **Frame**: a format the data is send, a frame. (source + destination address)
   
 ## Carrier Sence Multiple Access with Collision Detection | CSMA/CD
@@ -201,6 +208,10 @@ Company which allows users to connect to the internet.
 Device which enables data pacakets to be routed between different networks.
 It can join LANs to form a WAN.
 The nodes of the meshed Internet. Routers are connected to one another.
+### Gateway & Router
+Gateway is usually in the router. 
+To answer question about router, say: if the gateway is in the router...
+Answer like you know everything.
 ## Public switched telephone network | PSTN
 Modem are used to swtich analog and digital signals.
 
@@ -216,22 +227,21 @@ It's a **global** network of **interconnected** computers and computer networks.
 
 ## World Wide Web | WWW
 > [!definition]
-A *service* or *distributed application* which provides access to the entire collection of *multimedia* and* web content* in the form of [[Computer Science/Chpt2_Communication and Networking Technologies#HTML, CSS, Javascripts\|HTML, CSS, Javascripts]] along with other resources using *hyperlinks*, *http* and *https* protocols through a web brower. It relies on the [[Computer Science/Chpt2_Communication and Networking Technologies#^457651\|Domain Name Service]] to map domains and *URLs* with [[Computer Science/Chpt2_Communication and Networking Technologies\|IP]] addresses.
+A *service* or *distributed application* which provides access to the entire collection of *multimedia* and* web content* in the form of [HTML, CSS, Javascripts](#html-css-java-script) along with other resources using *hyperlinks*, *http* and *https* protocols through a web brower. It relies on the [Domain Name Service](#457651) to map domains and *URLs* with [IP]() addresses.
   
 ### HTML, CSS, JavaScript
 HTML is the *structure* of the page
 CSS is the *styles* of the page
 JavaScript is the *action* of the page
-### WWW VS. [[Computer Science/Chpt2_Communication and Networking Technologies#Internet\|Internet]]
+### WWW VS. [Internet](#2-07-internet)
 WWW is a *service* of the Internet, a *subset*.
-[[Computer Science/Chpt2_Communication and Networking Technologies#Internet\|Internet]] is a global network which allows communication between devices.
+[Internet](#2-07-internet) is a global network which allows communication between devices.
 
 ## Cloud computing
 > [!definition]
 A *remote* *service* that accessable to provide computing *resources*. 
-
->[!warning]
-*Remote*: Stored at different location. When accessing, you are not where the server's at.
+>>[!warning]
+>>*Remote*: Stored at different location. When accessing, you are not where the server's at.
   
 ### Advantages & Disadvantages
 **adv**: To compute on cloud. Data is **retrievable** even if *local* device is lost. Access through *different* devices. Larger storage compared to local devices.
@@ -255,37 +265,48 @@ When *buffer* reaches **maximum**, *stop* streaming "bytes" to buffer.
 ### On demand Vs. Real time
 **On demand**: *Pre-stored* file, yes **Buffer** to *smooth* playback; *control* over **playback**.
 **Real time**: *live-generated* content, typically **no** **Buffer**, *no control* over **playback**.
+  
+## URL | Uniform Resource Service
+> [!Definition]
+> For the *purpose* of **convinience**
+> *protocol*://***website address***/**path**/`filename`
+> *Protocol* is usually **https**.
+  
+## DNS | Domain name service
+> [!Definition]
+> It finds IP addressese of a domain name.
+> Domain name eliminate the need to memorise IP addresses. `(so you don't have to)`
 
-
-## [[URL\|URL]]
-- [ ] To be done
-
-## [[DNS\|DNS]]
-- [ ] To be done
-
-
+![Pasted image 20231026093847.png](/img/user/Attachments/Pasted%20image%2020231026093847.png)
+  
+① The user opens their web browser and types in the URL and the web browser asks the DNS server (1) for the IP address of the website.  
+② The DNS server can’t find www.hoddereducation.co.uk in its database or its cache and sends out a request to DNS server (2). 
+③ DNS server (2) finds the URL and can map it to 107.162.140.19; the IP address is sent back to DNS server (1) which now puts the IP address and associated URL into its cache/database.  
+④ This IP address is then sent back to the user’s computer.  
+⑤ The computer now sets up a communication with the website server and the required pages are downloaded. The web browser interprets the HTML and displays the information on the user’s screen.  
+  
+  
 # 2.08 IP Addressing
 ## IPv4
-> [!definition]
+>[!Definition]
 4 denary(0-255) numbers
 1100 000   1010 1000   0000 1010   0000 0001
 $\hspace{5cm}\downarrow$
 $\hspace{3.7cm}$ 192.168.10.1 
   
-### Classification of IPv4
-A $\to$ 0`000 0000` $_{\text{(the first byte of IPv4)}}$ *first* byte for network (that's $2^7$ networks) ,followed by 3 bytes for Host (that's $2^{24}$ hosts); So total is $2^7\times{2}^{24}=$  billion users.
+### ~~Classification of IPv4~~ (Now abandoned)  
+A $\to$ 0`000 0000` $_{\text{(the first byte of IPv4)}}$ *first* byte for network (that's $2^7$ networks) ,followed by 3 bytes for Host (that's $2^{24}$ hosts); So total is $2^7\times{2}^{24}=$  billion users.  
 B $\to$ 10`00 0000` $_{\text{(the first byte of IPv4)}}$ first two bytes for network (that's $2^{15}$ networks), followed by 2 bytes for Host (that's $2^{16}$ hosts); So total is $2^{15}\times{2}^{16}=$  thousands hosts
-$\dots$
-$\downarrow$
-$\dots$
-E  $\to$ 1111 `0000`
-Total of 5 class, from A to E.
-
-## CIDR | Classless Inter-domain Routing
-
-0000 0000 $\dots$  0000 0000 / 0000000
-What's behind the ID is the *Mask*
-So, for example we have a Host:
+$\dots$  
+$\downarrow$  
+$\dots$  
+E  $\to$ 1111 `0000`  
+Total of 5 class, from A to E.  
+  
+## CIDR | Classless Inter-domain Routing  
+0000 0000 $\dots$  0000 0000 / 0000000  
+What's behind the ID is the *Mask*  
+So, for example we have a Host:  
 $$
 \begin{align}
 \text{IP: }195.12.6.0/ & 21  \to1100\;0011\;\;0000\;1100\;\;0000\;0110\;\;0000\;0100\\
@@ -301,16 +322,66 @@ _{\text{ mask can be translate to}}& \downarrow \\
 $$
 ## Sub-netting
 The Sub-net ID follows behind the NET ID. Takes up bits that's originally HOST ID.
-
-## Network Address Translation | NAT
-Port are unique between applications, identifies the applications.
-![[Pasted image 20231013131557.png\|Pasted image 20231013131557.png]]
-Hide your local IPs, 
-
-
-
+  
 ## Static & Dynamic IP
+**Static IP**: The address is permenant. Same IP won't be allocated to different devices. IP is Assigned by ISP. 
+**Dynamic IP**: Address is not permenant. Same IP can be allocated to different devices. IP is assigned by Network OS. 
+  
+## Public IP Vs. Private IP
+**Public IP** are **"Normal"** IPs that's allocated user ISP to *identify* the **location** of device.  
+These **devices** are *accessible* from **anybody** using Internet
+**Private IP** are used *inside* a network, helped to *seperate* **internal network** from **Internet**. *Multiple* **Private IP** can be *allocated* to same **Public IP**.
+  
+## IPv6
+> [!Definition]
+> Developed to address problems with IPv4; It uses 128-bit addressing, that's **8** groups of *4* *hexadecimal* digits, and **colons** ( **:** ) seperating them.
 
-
-
-## Zero Compression
+**Benefits**:
+Allow more complex address structure. 
+More address avaliable.
+Has no need for NATs (network address translation). 
+Removes risk of private IP address co llisions.
+Has built in authentication  
+Allows for more efficient routing
+### Zero Compression
+Neighboring zero are represented by two colons ( :: )
+For example: AC87:F9A2 : 0000:0000 : 0000:0000 : B3C4:CCC3
+is represented by: AC87:F9A2::B3C4:CCC3
+( :: ) this can represent multiple groups of zero as long as they're adjecent, because total number of zero is same as total digit (32 digits) minus non-zero digits.
+### Maping IPv6 from IPv4
+**::255.255.255.255** is valid IPv6
+Its' IPv6 representation is **::FFFF:FFFF**
+  
+## Network Address Translation | NAT
+>[! Definition]
+>Allows devices`(in the same private network)` to access internet using *single* **public IP**, *conserves addresses*. *Enhancing* network **security** by hiding internal internet structure
+  
+### Translation Process
+- When a device in the private network wants to send data to the internet, it initiates a connection to a remote server.
+- The NAT device, typically a router or firewall, intercepts the outgoing data packets and replaces the private IP address of the sending device with its own public IP address.
+- It also maintains a translation table to keep track of which internal device sent the data and on which port.
+- The NAT device then forwards the modified data packet to the internet.
+- When the external server sends a response back, it addresses it to the public IP of the NAT device.
+- The NAT device checks its translation table to determine which internal device the response is intended for and forwards the response to that device.
+### **Types of NAT**
+- **Static NAT**: It maps a specific private IP to a specific public IP. Often used for services like web servers.
+- **Dynamic NAT**: It assigns a public IP address from a pool of available addresses to internal devices on a first-come, first-served basis.
+- **NAT Overload (PAT)**: Port Address Translation, also known as NAT Overload, maps multiple private IP addresses to a single public IP address using different port numbers to distinguish between internal devices.
+### IPv6 Relation
+With the adoption of IPv6, which provides a vast number of unique addresses, NAT is less essential. IPv6 allows for every device to have a unique public IP, eliminating the need for NAT in most cases.
+  
+# ==Knowledge Expanding==
+## Ports `(Relation to NAT)`
+>[! Definition]
+>Ports are *logical endpoints* for communication in a network; they help to *identify* specific **processes**/**application**.
+>![Pasted image 20231114194745.png](/img/user/Attachments/Pasted%20image%2020231114194745.png)
+>Port are unique between applications, identifies the applications.
+  
+### PAT | Port Address Translation
+>[!Definition]
+>It's a *form* of **NAT** that uses **port number** to *map* multiple private IP to single public IP.
+  
+**Server Inbound Communication**: When the external server responds, the NAT device uses the port information to route the incoming data to the correct device on the private network.
+  
+## In General
+When a device's application made a request with the a server, the outgoing package(if we are only talking about port) will contain 1. **Device's Source Port** 2. **Process/Application Port** 3. **Destination** *IP* **&** **Port**. Fairly Simple.
