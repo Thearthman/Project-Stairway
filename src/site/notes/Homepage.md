@@ -25,7 +25,7 @@
 <br>
 
 # **Todo**
-- [ ] ~~CS Chapter 3 -suspended~~
-- [ ] ~~CS Chapter 4 - suspended~~
-
+- [ ] ~~#CS Chapter 3 -suspended~~
+- [ ] ~~#CS Chapter 4 - suspended~~
+- [ ] #CS Chapter 5 - now working
 
