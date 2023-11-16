@@ -15,7 +15,7 @@
 <br>
 
 # Announcements  
-## News  
+## **News**  
 2023-11-16:  
 	Project on *RUSH*, Chapter 5 will be out soon, as Chapter 3 & 4 is suspended.  
 
@@ -25,7 +25,7 @@
 
 <br>
 
-# **Todo**
+# Todo
 - [ ] ~~#CS Chapter 3 -suspended~~
 - [ ] ~~#CS Chapter 4 - suspended~~
 - [ ] #CS Chapter 5 - now working
