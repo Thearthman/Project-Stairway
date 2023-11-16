@@ -13,14 +13,15 @@
 ## If you want to [[Learning Obsidian/Learning Obsidian\|Learn Obsidian]]   
 
 <br>
-# Announcements
-## News
-2023-11-16:
-	Project on *RUSH*, Chapter 5 will be out soon, as Chapter 3 & 4 is suspended.
 
-## *Update*
-2023-11-16:
-	A-Level Computer Science Chapter 2 up to date.
+# Announcements  
+## News  
+2023-11-16:  
+	Project on *RUSH*, Chapter 5 will be out soon, as Chapter 3 & 4 is suspended.  
+
+## *Update*  
+2023-11-16:  
+	A-Level Computer Science Chapter 2 up to date.  
 
 <br>
 
