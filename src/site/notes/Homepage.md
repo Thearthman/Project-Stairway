@@ -6,8 +6,8 @@
 
 >This is a web page built on *Project-Stairway* to help people (and me) to improve on **Learning Healthily**.  
 
-Github Repo: [Thearthman/Project-Stairway (github.com)](https://github.com/Thearthman/Project-Stairway) *Please* ***Star*** 🥹🥹🥹
-Post an *Issus* on [git repo]([Thearthman/Project-Stairway (github.com)](https://github.com/Thearthman/Project-Stairway/issues)) if there's a problem.
+Github Repo: [Thearthman/Project-Stairway (github.com)](https://github.com/Thearthman/Project-Stairway) *Please* ***Star*** 🥹🥹🥹  
+Post *Issuses* on [git repo](https://github.com/Thearthman/Project-Stairway/issues) if there's a problem.
 
 <br><br>
 
