@@ -1,6 +1,3 @@
-import { inject } from '@vercel/analytics'
-inject()
-
 const slugify = require("@sindresorhus/slugify");
 const markdownIt = require("markdown-it");
 const fs = require("fs");
