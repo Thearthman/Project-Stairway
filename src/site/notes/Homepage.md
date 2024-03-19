@@ -19,17 +19,17 @@ Post *Issuses* on [git repo](https://github.com/Thearthman/Project-Stairway/issu
 
 # Announcements  
 ## **News**  
-2023-11-16:  
-	Project on *RUSH*, Chapter 5 will be out soon, as Chapter 3 & 4 is suspended.  
+2024-3-19
+	All Chapter 1-12 (based on Cambridge order) will be released after 3.28 (G11 A-level mock test).
 
 ## *Update*  
-2023-11-16:  
-	A-Level Computer Science Chapter 2 up to date.  
+2024-3-19:  
+	Pdf versions are out, please wait patiently for the release. 
 
 <br>
 
 # Todo
-- [ ] ~~#CS Chapter 3 -suspended~~
-- [ ] ~~#CS Chapter 4 - suspended~~
-- [ ] #CS Chapter 5 - now working
-
+- [ ] Chapter_8 Computer Operating System
+- [ ] Chapter_12
+- [ ] Chapter_11
+- [ ] Chapter_9
