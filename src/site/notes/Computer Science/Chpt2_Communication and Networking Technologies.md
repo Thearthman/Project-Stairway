@@ -437,8 +437,8 @@ Its' IPv6 representation is **::FFFF:FFFF**
 >[! Definition]
 >Allows devices`(in the same private network)` to access internet using *single* **public IP**, *conserves addresses*. *Enhancing* network **security** by hiding internal internet structure
 
-This passage explains the relationship between NAT and IPV4 and IPV6 pretty well. Be sure to check it. https://www.rapidseedbox.com/blog/why-is-nat-not-needed-in-ipv6#01
-  https://www.rapidseedbox.com/blog/why-is-nat-not-needed-in-ipv6#01
+[This passage](https://www.rapidseedbox.com/blog/why-is-nat-not-needed-in-ipv6#01) explains the relationship between NAT and IPV4 and IPV6 pretty well. Be sure to check it. 
+
 ### Translation Process
 - When a device in the private network wants to send data to the internet, it initiates a connection to a remote server.
 - The NAT device, typically a router or firewall, intercepts the outgoing data packets and replaces the private IP address of the sending device with its own public IP address.
