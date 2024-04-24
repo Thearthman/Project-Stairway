@@ -12,7 +12,7 @@
 ## Local Area Network | LAN  
 > [!definition]  
 > It's a **network** that connects computing devices within a *limited geographical* *area* (like a building, company). **Typically** have a *higher* **transmission** rate (bandwidth), and connects to *workstations, [Switches](#switch-vs-hub), [access points](#wireless-lans-wla-ns)*, share resoureces like papers, files. **Cost** is usuallly *lower*.
-> - Wired: WiFi, Bluetooth   
+> - Wirelss: WiFi, Bluetooth   
 > - Wried: Ethernet   
 ### Wireless Lans | WLANs
 Wireless Lans which **needs** *WAPs* `(Wirelss access points)` to communicate.  
