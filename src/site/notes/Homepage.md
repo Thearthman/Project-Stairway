@@ -7,7 +7,7 @@
 >This is a web page built on *Project-Stairway* to help people (and me) to improve on **Learning Healthily**.  
 
 Github Repo: [Thearthman/Project-Stairway (github.com)](https://github.com/Thearthman/Project-Stairway) *Please* ***Star*** 🥹🥹🥹  
-Post *Issuses* on [git repo](https://github.com/Thearthman/Project-Stairway/issues) if there's a problem.
+Post *Issuses* on [git repo](https://github.com/Thearthman/Project-Stairway/issues) if there's a problem. 
 
 <br><br>
 
@@ -19,17 +19,17 @@ Post *Issuses* on [git repo](https://github.com/Thearthman/Project-Stairway/issu
 
 # Announcements  
 ## **News**  
-2024-3-19
-	All Chapter 1-12 (based on Cambridge order) will be released after 3.28 (G11 A-level mock test).
+2023-11-16:  
+	Project on *RUSH*, Chapter 5 will be out soon, as Chapter 3 & 4 is suspended.  
 
 ## *Update*  
-2024-3-19:  
-	Pdf versions are out, please wait patiently for the release. 
+2023-11-16:  
+	A-Level Computer Science Chapter 2 up to date.  
 
 <br>
 
 # Todo
-- [ ] Chapter_8 Computer Operating System
-- [ ] Chapter_12
-- [ ] Chapter_11
-- [ ] Chapter_9
+- [ ] ~~#CS Chapter 3 -suspended~~
+- [ ] ~~#CS Chapter 4 - suspended~~
+- [ ] #CS Chapter 5 - now working
+
