@@ -2,7 +2,6 @@
 {"dg-publish":true,"permalink":"/Computer Science/Chpt2_Communication and Networking Technologies/"}
 ---
 
-
 # 2.01 Network
 > [!definition]  
 *Connection* of *different* **(one or more)** *computing* devices for *communication* or *data transmission* and *sharing resources* using *wired* or *wireless* connection
@@ -12,7 +11,7 @@
 ## Local Area Network | LAN  
 > [!definition]  
 > It's a **network** that connects computing devices within a *limited geographical* *area* (like a building, company). **Typically** have a *higher* **transmission** rate (bandwidth), and connects to *workstations, [Switches](#switch-vs-hub), [access points](#wireless-lans-wla-ns)*, share resoureces like papers, files. **Cost** is usuallly *lower*.
-> - Wirelss: WiFi, Bluetooth   
+> - Wired: WiFi, Bluetooth   
 > - Wried: Ethernet   
 ### Wireless Lans | WLANs
 Wireless Lans which **needs** *WAPs* `(Wirelss access points)` to communicate.  
@@ -87,7 +86,7 @@ Able to do all *three* Casting Way
 <br>
 
 ## Star
-![Pasted image 20230925101112.png](/img/user/Attachments/Pasted%20image%2020230925101112.png)
+![Pasted image 20230925101112.png](/img/user/Attachments/Pasted%20image%2020230925101112.png)  
 > [!definition]  
 For Swtiches, Each end-system has a point-to-point connection to the central device. Transmission is duplex.  
 Able to do all *three* Casting Way
@@ -98,7 +97,7 @@ Able to do all *three* Casting Way
 <br>  
   
 ## Ring
-![Pasted image 20231114131736.png](/img/user/Attachments/Pasted%20image%2020231114131736.png)  
+![Pasted image 20231114131736.png](/img/user/Attachments/Pasted%20image%2020231114131736.png)
 > [!definition]  
 It goes in a ring. Like a bus, if one connection is lost, all connection are down.
 
@@ -197,7 +196,7 @@ Deals with *Local*. *Small-scale* network.
   
 
 ## Gateway
-![Pasted image 20231009112834.png|400](/img/user/Attachments/Pasted%20image%2020231009112834.png)  
+![Pasted image 20231009112834.png|400](/img/user/Attachments/Pasted%20image%2020231009112834.png)
 > [!definition]  
 *Gate* to *another* **network**. Does *translation* between two networks (*different* protocols). ` (translation: when one network is fiber optics and is using fram relay, another one is UTP using Ethernet.)` Can still be LANs.
 *Divide* **broadcast** signal.
@@ -320,7 +319,7 @@ A place with bunch of servers.
 <br>
 
 ## Bit Streaming
-![Pasted image 20231019111224.png](/img/user/Attachments/Pasted%20image%2020231019111224.png)  
+![Pasted image 20231019111224.png](/img/user/Attachments/Pasted%20image%2020231019111224.png)
 When *buffer* reaches the **mininum**, *starts* streaming "bytes".  
 When *buffer* reaches **maximum**, *stop* streaming "bytes" to buffer.
 *Media Player* **constantly** *draws* *data* from *buffer*.
@@ -436,9 +435,7 @@ Its' IPv6 representation is **::FFFF:FFFF**
 ## Network Address Translation | NAT
 >[! Definition]
 >Allows devices`(in the same private network)` to access internet using *single* **public IP**, *conserves addresses*. *Enhancing* network **security** by hiding internal internet structure
-
-[This passage](https://www.rapidseedbox.com/blog/why-is-nat-not-needed-in-ipv6#01) explains the relationship between NAT and IPV4 and IPV6 pretty well. Be sure to check it. 
-
+  
 ### Translation Process
 - When a device in the private network wants to send data to the internet, it initiates a connection to a remote server.
 - The NAT device, typically a router or firewall, intercepts the outgoing data packets and replaces the private IP address of the sending device with its own public IP address.
