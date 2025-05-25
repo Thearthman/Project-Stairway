@@ -82,7 +82,7 @@ Registers have the highest r/w speed. They are usually inside CPU providing high
 ### ROM | Read-Only Memory  
 >[! def]
 > Has same *direct-access* properties of RAM.  
-> Holds **boot-up sequence** & **basic input and output instructions** ([[Computer Science/Chpt3_Hardware#BIOS Basic Input Output System\|BIOS]]).  
+> Holds **boot-up sequence** & **basic input and output instructions** ([[#BIOS Basic Input Output System|BIOS]]).  
 > Preserves data after power off - *Non-Volatile*. **Permanent memory device**  
 
 - **PROM | Programmable ROM**
