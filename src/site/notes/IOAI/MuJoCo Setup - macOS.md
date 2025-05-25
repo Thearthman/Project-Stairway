@@ -68,7 +68,7 @@ Your working directory should now contain the following structure:
 ## 3.2 Install Dependencies
 Open a terminal inside the robosuite-1.5.1 directory.
 
-1. First, locate your mjpython interpreter:
+1. First, locate your mjpython (only macOS uses this) interpreter:
 ```sh
 which mjpython
 ```
