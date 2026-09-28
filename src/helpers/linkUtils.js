@@ -1,5 +1,21 @@
 const wikiLinkRegex = /\[\[(.*?\|.*?)\]\]/g;
 const internalLinkRegex = /href="\/(.*?)"/g;
+// Root-relative markdown links, e.g. [label](/A-Level/Computer%20Science/Chpt13/)
+const markdownLinkRegex = /\]\((\/[^)\s"']*)/g;
+
+function normalizeLinkTarget(link) {
+  let target = link;
+  try {
+    target = decodeURIComponent(target);
+  } catch {
+    // leave the raw target if it is not valid percent-encoding
+  }
+  return target
+    .replace(/.(md|markdown)\s?$/i, "")
+    .replace("\\", "")
+    .trim()
+    .split("#")[0];
+}
 
 function caselessCompare(a, b) {
   return a.toLowerCase() === b.toLowerCase();
@@ -9,23 +25,13 @@ function extractLinks(content) {
   return [
     ...(content.match(wikiLinkRegex) || []).map(
       (link) =>
-        link
-          .slice(2, -2)
-          .split("|")[0]
-          .replace(/.(md|markdown)\s?$/i, "")
-          .replace("\\", "")
-          .trim()
-          .split("#")[0]
+        normalizeLinkTarget(link.slice(2, -2).split("|")[0])
     ),
     ...(content.match(internalLinkRegex) || []).map(
-      (link) =>
-        link
-          .slice(6, -1)
-          .split("|")[0]
-          .replace(/.(md|markdown)\s?$/i, "")
-          .replace("\\", "")
-          .trim()
-          .split("#")[0]
+      (link) => normalizeLinkTarget(link.slice(6, -1).split("|")[0])
+    ),
+    ...(content.match(markdownLinkRegex) || []).map(
+      (link) => normalizeLinkTarget(link.slice(2))
     ),
   ];
 }

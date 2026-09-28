@@ -1,4 +1,5 @@
 dist
+node_modules
 netlify/functions/search/data.json
 netlify/functions/search/index.json
 src/site/styles/theme.*.css

@@ -248,19 +248,37 @@ module.exports = function (eleventyConfig) {
           return self.renderToken(tokens, idx, options, env, self);
         };
       md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
+        const hrefIndex = tokens[idx].attrIndex("href");
+        const href = hrefIndex < 0 ? "" : tokens[idx].attrs[hrefIndex][1];
+        // Links whose href points at this site (root-relative) are internal
+        // links. Treat them like Obsidian wikilinks so they keep the
+        // internal-link styling, stay in the same tab and get their note icon.
+        const isInternal = href.startsWith("/");
         const aIndex = tokens[idx].attrIndex("target");
         const classIndex = tokens[idx].attrIndex("class");
 
         if (aIndex < 0) {
-          tokens[idx].attrPush(["target", "_blank"]);
+          tokens[idx].attrPush(["target", isInternal ? "" : "_blank"]);
         } else {
-          tokens[idx].attrs[aIndex][1] = "_blank";
+          tokens[idx].attrs[aIndex][1] = isInternal ? "" : "_blank";
         }
 
         if (classIndex < 0) {
-          tokens[idx].attrPush(["class", "external-link"]);
+          tokens[idx].attrPush([
+            "class",
+            isInternal ? "internal-link" : "external-link",
+          ]);
         } else {
-          tokens[idx].attrs[classIndex][1] = "external-link";
+          tokens[idx].attrs[classIndex][1] = isInternal
+            ? "internal-link"
+            : "external-link";
+        }
+
+        if (isInternal && tokens[idx].attrIndex("data-note-icon") < 0) {
+          tokens[idx].attrPush([
+            "data-note-icon",
+            process.env.NOTE_ICON_DEFAULT || "",
+          ]);
         }
 
         return defaultLinkRule(tokens, idx, options, env, self);
