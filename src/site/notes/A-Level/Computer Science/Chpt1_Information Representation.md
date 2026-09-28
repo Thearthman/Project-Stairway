@@ -4,50 +4,52 @@
 
 
 # 1.01 Number System
-
 ## Place Value
-
->[!definition]
+```ad-def
 The *value* that a *specific place* in the number system refers to. 
 For example, *300* have a place value of *$10^2$*
+```
+
 
 ## Digit
-
->[!definition]
+```ad-def
 Digit is the *number* that *specific place* is *assigned* with.
 For example, *300* have a digit of *3* in *$10^2$ place*
-
+```
 ## Binary
-> [!definition]
+
+```ad-def
+
 A bit is a binary digit in base-2/binary system that's representated using 0 or 1.
+```
+
+^def124
 
 ## Denary
-
->[!definition]
+```ad-def
 Denary is written with 10 symbols:0,1,2,3,4,5,6,7,8,9.
-
-
+```
 ### **Conversion**
 
-1.  [[A-Level/Computer Science/Chpt1_Information Representation#Binary\|Binary]] to [[A-Level/Computer Science/Chpt1_Information Representation#Denary\|Denary]]: *Successive devision*
+1. [Binary](/A-Level/Computer%20Science/Chpt1_Information%20Representation/#binary) to [Denary](/A-Level/Computer%20Science/Chpt1_Information%20Representation/#denary): *Successive devision*
 #### *Successive Devision*
+```ad-def
 
->[!example] Example of Succesive Devision
->$$\begin{align}
->52\div 2&=26\dots 0 \\
->26\div 2&=12\dots 0 \\
->13\div 2&=6\dots 1 \\
->6\div 2&=3\dots 0 \\
->3\div 2&=1\dots 1 \\
->1\div 2&=0\dots 1 \\
->0\div 2&=0\dots 0
->\end{align}$$
+$$\begin{align}
+52\div 2&=26\dots 0 \\
+26\div 2&=12\dots 0 \\
+13\div 2&=6\dots 1 \\
+6\div 2&=3\dots 0 \\
+3\div 2&=1\dots 1 \\
+1\div 2&=0\dots 1 \\
+0\div 2&=0\dots 0
+\end{align}$$
+```
 
-2.  Binary to Denary: *Successive Multiplication*
+2. Binary to Denary: *Successive Multiplication*
 #### *Succesive Multiplication*
-
->[!example] Example of Succesive Multiplication  
->$$
+```ad-def
+$$
 \begin{align} 
 & &\to1\times 2=2 \\
 \hline
@@ -63,16 +65,17 @@ Denary is written with 10 symbols:0,1,2,3,4,5,6,7,8,9.
 24+1&=25  &\to
 25\times 2 =50
 \end{align}
-$$  
+$$
+```
+
 ## Hexadecimal
-### **Conversion**  
-Denary to Hexadecimal: [[A-Level/Computer Science/Chpt1_Information Representation#*Successive Devision*\|Successive devision]] works
+### **Conversion**
+Denary to Hexadecimal: [Successive devision](/A-Level/Computer%20Science/Chpt1_Information%20Representation/#successive-devision) works
 Binary to Hexadecimal: too ez
-Hexadecimal to Denary: [[A-Level/Computer Science/Chpt1_Information Representation#*Succesive Multiplication*\| Successive multiplication]] works, replace
+Hexadecimal to Denary: [Successive multiplication](/A-Level/Computer%20Science/Chpt1_Information%20Representation/#succesive-multiplication) works, replace 
 Hexadecimal to Binary: too ez
-## EQ  
+## EQ
 ![Screenshot 2023-09-04 at 10.22.43.png](/img/user/Attachments/Screenshot%202023-09-04%20at%2010.22.43.png)
-  
 $$
 \begin{align} 
 46\div 2&=23\dots_{0} \\
@@ -85,7 +88,7 @@ $$
 \end{align}
 $$
 ![Screenshot 2023-09-04 at 10.23.40.png](/img/user/Attachments/Screenshot%202023-09-04%20at%2010.23.40.png)
-i.  
+i. 
 $$
 \begin{align}
 150 \div 2&= 75\dots_{0} \\
@@ -99,7 +102,7 @@ $$
 &=10010110
 \end{align}
 $$
-ii.  
+ii. 
 $$
 \begin{align}
 1001&\to 9 \\
@@ -107,35 +110,32 @@ $$
 \end{align}
 $$
 ## Quiz
-[[1.1._Number_Systems_Quiz_.pdf]]
-[[IMG_9986 1.pdf\| Answer]]
+[1.1._Number_Systems_Quiz_.pdf](/img/user/Attachments/1.1._Number_Systems_Quiz_.pdf)
+Answer
 
 # 1.02 Numbers and Quantities
-
 # Kib
-
 Kib = $2^{10}$ bits
 Mib = $2^{20}$ bits
 Gib = $2^{30}$ bits
 Tib = $2^{40}$ bits
-\# Kb
+# Kb
 Kb = $10^3$ bits
 Mb = $10^6$ bits
 Gb = $10^9$ bits
 Tb = $10^{12}$ bits
 
 # 1.03 Internal Coding of Numbers
-
 ## *Two's Complement* for integer numbers
+>Way to represent ***negative*** numbers
 
-> Way to represent ***negative*** numbers
+```ad-def
+*Two's Complement*: The largest value of bit is negative.
+	$1000\;0000=-128$
+	$1111\;1111=-1$
+```
 
->[!definition]
-*Two's Complement*: The largest value of bit is negative.  
-$1000\;0000=-128$
-$1111\;1111=-1$
-
-**Method:**  
+**Method:** (for the denary number 24)
 $$
 \begin{align}
 0001\;1000& \\
@@ -148,37 +148,42 @@ $$
 $$
 
 **Range:**
-When using **8** digits, we get $(-2^{8-1} \to2^{8-1}-1)$ range of numbers
+When using **n** digits, we get $(-2^{{\color{gold}n}-1} \to2^{{\color{gold}n}-1}-1)$ range of numbers
+>[! def]
+>
+```ad-tk
+1. Keep in **mind** the digits, the **total** **digits** u have
+2. To get the **negative** of the current binary number, **flip** every digit
+```
 
->[!warning]
->1. Keep in **mind** the digits, the **total** **digits** u have.
->2. To get the **negative** of the current binary number, **flip** every digit
 
 ## Minusing
-Do [[A-Level/Computer Science/Chpt1_Information Representation#1.03 Internal Coding of Numbers\|two's compliment]] and add.  
-
+Do [two's compliment](/A-Level/Computer%20Science/Chpt1_Information%20Representation/#1-03-internal-coding-of-numbers) and add.
 ## Binary Coded Decimal (BCD)
-
->[!definition]
+```ad-def
 Using *4 bits* (because 3 ins't enough for 10 digits) to represent the each of the *10 digits* in *Decimal*.
 1 $\to$ 0001
 9 $\to$ 1001
-
+```
 ### Calculation of BCD
-
->[!example]  
->$$
+```ad-ep
+$$
 \begin{align}
 7\;8\;6& \\
 +\;3\;2\;5& \\
 \hline
-1\;1\;1\;1\\
-\text{equivalent to}\hspace{6cm}\\
+1\;1\;1\;1
+\end{align}
+$$
+*Equavelent to*
+$$
+\begin{align}
 0111\;1000\;0110& \\
 +\;0011\;0010\;0101& \\
 \hline 
 1010\;1010\;1011 \\
 do\; +6 \\
+
 1\;0001 \\
 \hline
 1011\;0001\\
@@ -190,92 +195,108 @@ do\; +6 \\
 \end{align}
 $$
 
+```
 
->[!warning]
+```ad-tk
 When the calculated value exeed 1001, add a 0110(6) to the value.
+```
 
-
-# 1.04 Internal Coding of Text
-
+# 1.04 Internal Coding of Text 
 ### keywords
-
 unicode
 ASCII
 Code
 Scheme
 ## ASCII Code
-
->[!definition]
-A method to represent *text* using [[A-Level/Computer Science/Chpt1_Information Representation#1.01 Number System\|number systems]]
-Full name: **American Standard Code**  
-**Fixed bits per character**  
+```ad-def
+A method to represent *text* using [number systems](/A-Level/Computer%20Science/Chpt1_Information%20Representation/#1-01-number-system)
+Full name: **American Standard Code**
+#### Fixed bits per character
 Total of *$2^7$(128)* numbers avaliable for *7-bit code*
+```
 
->[!warning]
+```ad-tk
 To convert *capital* letters (cause it comes first in terms of order) to *lower case* letters, *add* **32** to the *denary* value. This is *equivalent* to adding **0010 0000** to the *binary* value.
+```
 
 ## Unicode
+```ad-def
+More versatile than [ASCII Code](/A-Level/Computer%20Science/Chpt1_Information%20Representation/)
+#### **Dynamic bits per character**
 
->[!definition]
-More versatile than [[A-Level/Computer Science/Chpt1_Information Representation#\|ASCII Code]]  
-**Dynamic bits per character**
+```
+
 
 # 1.05 Images
-
 ## Vector
-
->[!definition]
+```ad-def
 Created as individual *drawing object*
 Vector file contains a *drawing list*. Each from the list contain *property* of the object.
-
+```
 ## Bitmap
-
->[!definition]
+```ad-def
 Created using picture element (pixel)
 Pixel is the smallest element of the image.
+```
 
 ### Color Depth
-
->[!definition]
+```ad-def
 Number of bits per pixel.
-
+```
 ### Image Size Calculation
-
->[!example] Formula
+```ad-fm
 Image Size **(In bytes)** = resolution * Color depth **(in bytes)**
+```
 
->[!warning]
+```ad-tk
 MB = mega *byte* $\to 1*10^6$ byte
 Mb = mega *bit*
 Mbps = mega *bits* per second
 MiB = **mebi** *bytes*
 
+```
+
 # 1.06 Sound
-
 ## Sample Rate
+```ad-def
+Similar to frame rate, Sample Rate corresponds to the number of samples per unit time.
+```
 
->[!definition]
-Similar to Resolution, corresponds to the resolution/quality of the sound wave.
+## Sample Resolution
+```ad-def
+The number choice of the amplitude you can choose inside a single samlple. The higher the sample resolution, more choice would be avaliable from 0 amplitude to max amplitude. 
 
-## Sound Rate Calculation
+```
 
->[!example] Formula
+## How is audio represented (type of question)
+#ComputerScience_Revision/P1 
+```ad-def
+amplitude is recorded at a fixed number per unit time; each amplitude is represented in a **corresponding** binary value; the amplitudes/binary values are saved in sequence. 
+```
+
+## Sound File Size Calculation
+```ad-fm
 Sound Size *(in bytes)* = length * *Sample Rate* * *Sample per Second*
+```
 
 # 1.07 Compression Techniques
 
 ## *Lossy* Compression
 
-### perceptual music shaping \[lossy\]
-
->[!definition]
+### perceptual music shaping [lossy]
+```ad-def
 Used by MP3
 For **Music**: Remove redundent, sounds we can't hear, to save file size
+```
+
 
 ## *Lossless* Compression
 
-### RLE \| Run Length Encoding
+### RLE | Run Length Encoding
+#ComputerScience_Revision/P1 
+```ad-def
+For **Anything**: Pattern Length  
+One important thing about RLE: it will always put the data in form of number of times a character or pixel colour repeats followed by the value of the character or pixel. THIS MEANS **EVEN IF THE CHARACTER OR PIXEL ONLY REPEATED ONCE IT WILL STILL NOTE IT AS `Character 1`**
+```
 
->[!definition]
-For **Anything**: Pattern*Length, 
 

@@ -169,6 +169,20 @@ p > code {
     --callout-color: 158, 158, 158;
     --callout-icon: lucide-quote;
 }
+// Custom Admonition plugin types used by the imported A-Level Computer Science notes
+.callout[data-callout="def"] {
+    --callout-color: 0, 150, 136;
+    --callout-icon: lucide-book-open;
+}
+.callout[data-callout="tk"] {
+    --callout-color: 0, 191, 165;
+    --callout-icon: lucide-lightbulb;
+}
+.callout[data-callout="fm"],
+.callout[data-callout="ep"] {
+    --callout-color: 124, 77, 255;
+    --callout-icon: lucide-sigma;
+}
 .callout {
     overflow: hidden;
     border-style: solid;

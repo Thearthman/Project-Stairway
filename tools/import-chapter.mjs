@@ -22,6 +22,7 @@ import fs from "node:fs";
 import path from "node:path";
 import url from "node:url";
 import { createRequire } from "node:module";
+import { renderExcalidrawFile } from "./excalidraw-render.mjs";
 
 const require = createRequire(import.meta.url);
 const { headerToId } = require("../src/helpers/utils");
@@ -71,7 +72,6 @@ const NOTE_MAP = {
   "Chpt6_Security, Privacy and Data Integrity": "Chpt9_Security, Privacy and Data Integrity",
   "Chpt7_Ethics & Ownerships": "Chpt10_Ethics and Ownerships",
   "Chpt9_Algorithm design": "Chpt12_Algorithm design",
-  "Chpt12_Software Development": "Chpt12.5_Software Development",
   "Chpt14_Communication & Internet Technologies": "Chpt14_Communication and Internet Technologies",
   "Chpt15.1_Hardware & VM": "Chpt15.1_Hardware and VM",
   "Chpt15.2_Logic circuits & Boolean algebra": "Chpt15.2_Logic circuits and Boolean algebra",
@@ -106,6 +106,16 @@ function permalinkFor(targetNoteName) {
 function resolveAsset(rawTarget) {
   const base = path.basename(rawTarget);
   const candidates = [];
+  // Obsidian stores the drawing itself as "<name>.excalidraw.md" while notes
+  // embed it as "![[.../<name>.excalidraw]]"; also allow an exported raster.
+  if (/\.excalidraw$/i.test(rawTarget)) {
+    candidates.push(path.join(SRC_EXCALIDRAW, `${base}.md`));
+    candidates.push(path.join(SRC_ATTACHMENTS, `${base}.md`));
+    candidates.push(path.join(SRC_EXCALIDRAW, `${base}.png`));
+    candidates.push(path.join(SRC_ATTACHMENTS, `${base}.png`));
+    candidates.push(path.join(SRC_EXCALIDRAW, `${base}.svg`));
+    candidates.push(path.join(SRC_ATTACHMENTS, `${base}.svg`));
+  }
   if (rawTarget.startsWith("5-Utility/Attachments/")) {
     candidates.push(path.join(SRC_ATTACHMENTS, base));
   } else if (rawTarget.startsWith("5-Utility/Excalidraw/")) {
@@ -125,12 +135,22 @@ function copyAsset(rawTarget) {
     return null;
   }
   fs.mkdirSync(DEST_ATTACHMENTS, { recursive: true });
-  const dest = path.join(DEST_ATTACHMENTS, base);
+  // Drawings: use an existing raster export when present, otherwise render the
+  // scene to an SVG so it can be shown on the site.
+  if (/\.excalidraw\.md$/i.test(found) || /\.excalidraw$/i.test(found)) {
+    const svgName = `${base.replace(/\.excalidraw$/i, "")}.svg`;
+    const dest = path.join(DEST_ATTACHMENTS, svgName);
+    fs.writeFileSync(dest, renderExcalidrawFile(found), "utf8");
+    copied.push(`${svgName} (rendered)`);
+    return `/img/user/Attachments/${encodePath(svgName)}`;
+  }
+  const destName = path.basename(found);
+  const dest = path.join(DEST_ATTACHMENTS, destName);
   if (!fs.existsSync(dest)) {
     fs.copyFileSync(found, dest);
-    copied.push(base);
+    copied.push(destName);
   }
-  return `/img/user/Attachments/${encodePath(base)}`;
+  return `/img/user/Attachments/${encodePath(destName)}`;
 }
 
 function assetUrl(rawTarget) {
@@ -164,7 +184,8 @@ function convertEmbed(raw) {
     return `[${base}](${urlPath})`;
   }
   const width = metaStr && !Number.isNaN(Number(metaStr)) ? `|${metaStr}` : "";
-  return `![${base}${width}](${urlPath})`;
+  const alt = /\.excalidraw$/i.test(base) ? base.replace(/\.excalidraw$/i, "") : base;
+  return `![${alt}${width}](${urlPath})`;
 }
 
 function convertLink(raw) {
@@ -182,7 +203,8 @@ function convertLink(raw) {
   if (ASSET_EXT.has(ext) && !ref) {
     const urlPath = assetUrl(target);
     const base = path.basename(target);
-    if (!urlPath) return `<!-- MISSING ASSET: ${target} -->`;
+    // The attachment is gone from the vault: keep the text, drop the dead link.
+    if (!urlPath) return label || base;
     return `[${label || base}](${urlPath})`;
   }
 

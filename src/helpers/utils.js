@@ -14,13 +14,42 @@ function namedHeadings(md, state) {
 
     state.tokens.forEach(function(token, i) {
         if (token.type === 'heading_open') {
-            var text = md.renderer.render(state.tokens[i + 1].children, md.options)
+            var text = inlineText(state.tokens[i + 1]);
             var id = headerToId(text);
             var uniqId = uncollide(ids, id)
             ids[uniqId] = true
             setAttr(token, 'id', uniqId)
         }
     })
+}
+
+// Collect the plain text of an inline token (heading contents) without any
+// markdown/HTML markup, so the generated id matches the anchors produced by
+// headerToId() for [[note#heading]] links.
+function inlineText(token) {
+    if (!token) return "";
+    if (!token.children || token.children.length === 0) {
+        return token.content || "";
+    }
+    var text = "";
+    token.children.forEach(function(child) {
+        switch (child.type) {
+            case "text":
+            case "code_inline":
+            case "image":
+                text += child.content || "";
+                break;
+            case "softbreak":
+            case "hardbreak":
+                text += " ";
+                break;
+            default:
+                if (child.children && child.children.length) {
+                    text += inlineText(child);
+                }
+        }
+    });
+    return text;
 }
 
 function uncollide(ids, id) {

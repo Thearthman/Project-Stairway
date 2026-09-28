@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="479" height="401" viewBox="0 0 479 401">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g transform="translate(299.59 414.69)">
+<rect x="-275.59" y="-390.69" width="103" height="75" rx="18.75" ry="18.75" stroke="#1e1e1e" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" fill="none" fill-opacity="1"/>
+<text font-family="Virgil, 'Comic Sans MS', 'Segoe Print', cursive" font-size="20" text-anchor="middle" fill="#1e1e1e" fill-opacity="1" xml:space="preserve"><tspan x="-224.09" y="-362.19">web </tspan><tspan x="-224.09" y="-337.19">server</tspan></text>
+<path d="M -164.92,-354.29 L -98.12,-354.28 L -98.09,-271.03" fill="none" stroke="#1e1e1e" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1"/><polygon points="-98.09,-271.03 -102.99,-281.98 -93.2,-281.99" fill="#1e1e1e" stroke="none" fill-opacity="1"/>
+<rect x="-159.46" y="-264.46" width="136.93" height="67.92" rx="0" ry="0" stroke="#1e1e1e" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" fill="none" fill-opacity="1"/>
+<rect x="-32.39" y="-169.15" width="187.32" height="131.45" rx="0" ry="0" stroke="#1e1e1e" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" fill="none" fill-opacity="1"/>
+<path d="M -17.05,-231.59 L 64.01,-231.59 L 62.92,-181.2" fill="none" stroke="#1e1e1e" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1"/><polygon points="62.92,-181.2 58.26,-192.26 68.05,-192.05" fill="#1e1e1e" stroke="none" fill-opacity="1"/>
+<path d="M -125.5,-265.55 L -123.31,-195.44" fill="none" stroke="#1e1e1e" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" stroke-dasharray="8 8"/>
+<path d="M -57.58,-262.26 L -58.68,-194.35" fill="none" stroke="#1e1e1e" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" stroke-dasharray="8 8"/>
+<text font-family="Virgil, 'Comic Sans MS', 'Segoe Print', cursive" font-size="20" text-anchor="start" fill="#1e1e1e" fill-opacity="1" xml:space="preserve"><tspan x="-136.46" y="-173.97">min</tspan></text>
+<text font-family="Virgil, 'Comic Sans MS', 'Segoe Print', cursive" font-size="20" text-anchor="start" fill="#1e1e1e" fill-opacity="1" xml:space="preserve"><tspan x="-77.3" y="-176.16">max</tspan></text>
+<text font-family="Virgil, 'Comic Sans MS', 'Segoe Print', cursive" font-size="20" text-anchor="start" fill="#1e1e1e" fill-opacity="1" xml:space="preserve"><tspan x="-164.94" y="-363.48">&quot;byts stream&quot;</tspan></text>
+<rect x="-157.27" y="-263.34" width="85.44" height="66.82" rx="0" ry="0" stroke="#1e1e1e" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" stroke-dasharray="8 8" fill="#1e1e1e" fill-opacity="1"/>
+<ellipse cx="64.01" cy="-134.08" rx="8.76" ry="10.95" stroke="#1e1e1e" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" stroke-dasharray="8 8" fill="#ffc9c9" fill-opacity="1"/>
+<path d="M 48.67,-111.07 L 84.82,-107.79" fill="none" stroke="#1e1e1e" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" stroke-dasharray="8 8"/>
+<path d="M 65.11,-117.64 L 64.01,-86.97 L 51.96,-74.92" fill="none" stroke="#1e1e1e" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" stroke-dasharray="8 8"/>
+<path d="M 65.11,-86.97 L 78.25,-72.73" fill="none" stroke="#1e1e1e" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" stroke-dasharray="8 8"/>
+<text font-family="Virgil, 'Comic Sans MS', 'Segoe Print', cursive" font-size="20" text-anchor="start" fill="#e03131" fill-opacity="1" xml:space="preserve"><tspan x="-229.57" y="-226.53">buffer</tspan></text>
+<text font-family="Virgil, 'Comic Sans MS', 'Segoe Print', cursive" font-size="20" text-anchor="start" fill="#e03131" fill-opacity="1" xml:space="preserve"><tspan x="-94.83" y="-314.16">increase buffer</tspan></text>
+<text font-family="Virgil, 'Comic Sans MS', 'Segoe Print', cursive" font-size="20" text-anchor="start" fill="#e03131" fill-opacity="1" xml:space="preserve"><tspan x="-5.27" y="-240.67">decrease buffer</tspan></text>
+<text font-family="Virgil, 'Comic Sans MS', 'Segoe Print', cursive" font-size="20" text-anchor="start" fill="#e03131" fill-opacity="1" xml:space="preserve"><tspan x="-166.9" y="-94.34">Media Player</tspan></text>
+<path d="M -262.19,-235.22 L -262.19,-235.22" fill="none" stroke="#1971c2" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" stroke-dasharray="8 8"/>
+</g>
+</svg>

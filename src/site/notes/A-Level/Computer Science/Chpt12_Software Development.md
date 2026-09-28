@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A-Level/Computer Science/Chpt12.5_Software Development/"}
+{"dg-publish":true,"permalink":"/A-Level/Computer Science/Chpt12_Software Development/"}
 ---
 
 # Stages in program development
