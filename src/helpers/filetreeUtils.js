@@ -122,4 +122,19 @@ function getFileTree(data) {
   return fileTree;
 }
 
+// Returns true when the given subtree contains the note that is currently being
+// rendered, so the filetree can auto-expand every folder on the way to it.
+function branchContainsPermalink(fileOrFolder, permalink) {
+  if (!fileOrFolder || typeof fileOrFolder !== "object") {
+    return false;
+  }
+  if (fileOrFolder.isNote) {
+    return fileOrFolder.permalink === permalink;
+  }
+  return Object.keys(fileOrFolder).some((key) =>
+    branchContainsPermalink(fileOrFolder[key], permalink)
+  );
+}
+
 exports.getFileTree = getFileTree;
+exports.branchContainsPermalink = branchContainsPermalink;

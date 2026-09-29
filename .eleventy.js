@@ -10,6 +10,9 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 const { headerToId, namedHeadingsFilter } = require("./src/helpers/utils");
 const {
+  branchContainsPermalink,
+} = require("./src/helpers/filetreeUtils");
+const {
   userMarkdownSetup,
   userEleventySetup,
 } = require("./src/helpers/userSetup");
@@ -291,6 +294,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("isoDate", function (date) {
     return date && date.toISOString();
   });
+
+  // True when the given filetree branch contains the currently rendered note.
+  // Used to auto-expand the filetree down to the active page.
+  eleventyConfig.addFilter("branchContainsPermalink", branchContainsPermalink);
 
   eleventyConfig.addFilter("link", function (str) {
     return (

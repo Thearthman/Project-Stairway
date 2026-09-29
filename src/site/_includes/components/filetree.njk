@@ -7,7 +7,8 @@
                     <a data-note-icon="{{fileOrFolder.noteIcon}}" style="text-decoration: none;" class="filename" href="{{fileOrFolder.permalink}}">{{fileOrFolder.name}} </a>
                 </div>
             {% elif fileOrFolder.isFolder%}
-                <div class="folder inner-folder"  x-data="{isOpen: $persist(false).as('{{currentPath}}')}" @click.stop="isOpen=!isOpen">
+                {% set isActiveBranch = fileOrFolder | branchContainsPermalink(permalink) %}
+                <div class="folder inner-folder"  x-data="{isOpen: $persist({{ 'true' if isActiveBranch else 'false' }}).as('{{currentPath}}')}" {% if isActiveBranch %}x-init="isOpen = true"{% endif %} @click.stop="isOpen=!isOpen">
                     <div class="foldername-wrapper align-icon">
                     <i x-show="isOpen" style="display: none;"  icon-name="chevron-down"></i>
                     <i x-show="!isOpen"  icon-name="chevron-right"></i>
@@ -54,3 +55,48 @@
          </div>
       </nav>
     </div>
+    <script>
+      // Once Alpine has hydrated the tree, make sure the active note is revealed:
+      // expand any collapsed ancestor folder and scroll it into view inside the sidebar.
+      (function () {
+        function revealActiveNote() {
+          var sidebar = document.querySelector(".filetree-sidebar");
+          if (!sidebar) return;
+          var active = sidebar.querySelector(".notelink.active-note");
+          if (!active) return;
+
+          // A folder is open when the visibility wrapper that x-show controls is
+          // not hidden. Walking up from the note covers every ancestor folder.
+          var parent = active.parentElement;
+          while (parent && parent !== sidebar) {
+            if (parent.classList.contains("inner-folder")) {
+              var wrapper = parent.querySelector(":scope > div:not(.foldername-wrapper)");
+              if (wrapper && wrapper.style.display === "none") {
+                var header = parent.querySelector(":scope > .foldername-wrapper");
+                if (header) header.click();
+              }
+            }
+            parent = parent.parentElement;
+          }
+
+          // Scroll the active note into view, but only within the sidebar so the
+          // page itself is not scrolled.
+          var noteRect = active.getBoundingClientRect();
+          var sidebarRect = sidebar.getBoundingClientRect();
+          var margin = 10;
+          if (noteRect.top < sidebarRect.top) {
+            sidebar.scrollTop -= sidebarRect.top - noteRect.top + margin;
+          } else if (noteRect.bottom > sidebarRect.bottom) {
+            sidebar.scrollTop += noteRect.bottom - sidebarRect.bottom + margin;
+          }
+        }
+
+        document.addEventListener("alpine:initialized", revealActiveNote);
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", revealActiveNote);
+        } else {
+          revealActiveNote();
+        }
+        window.addEventListener("load", revealActiveNote);
+      })();
+    </script>
