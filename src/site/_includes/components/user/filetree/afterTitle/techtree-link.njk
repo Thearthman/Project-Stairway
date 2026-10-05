@@ -1,0 +1,60 @@
+{# Link to the browser-only HKUST Course Tree visualizer (static Vercel app). #}
+<div class="techtree-link-wrap">
+    <a class="techtree-link"
+       href="{{ meta.techtreeUrl }}"
+       target="_blank"
+       rel="noopener noreferrer"
+       title="Open the HKUST Course Tree prerequisite visualizer">
+        <i icon-name="git-branch" aria-hidden="true"></i>
+        <span>HKUST Course Tree</span>
+        <i icon-name="external-link" aria-hidden="true" class="techtree-link-external"></i>
+    </a>
+</div>
+<style>
+    .techtree-link-wrap {
+        display: flex;
+        justify-content: center;
+        margin: 6px 0 10px;
+    }
+
+    .techtree-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--background-modifier-border, rgba(128, 128, 128, 0.35));
+        background-color: var(--background-primary, transparent);
+        color: var(--text-normal, inherit);
+        font-size: 0.85rem;
+        line-height: 1.2;
+        white-space: nowrap;
+        text-decoration: none;
+        transition: background-color 120ms ease, border-color 120ms ease;
+    }
+
+    .techtree-link:hover {
+        border-color: var(--interactive-accent, currentColor);
+        background-color: var(--background-secondary-alt, rgba(128, 128, 128, 0.15));
+        text-decoration: none;
+    }
+
+    .techtree-link i {
+        width: 15px;
+        height: 15px;
+    }
+
+    .techtree-link-external {
+        opacity: 0.65;
+    }
+
+    @media (max-width: 800px) {
+        .navbar .techtree-link span {
+            display: none;
+        }
+
+        .navbar .techtree-link-external {
+            display: none;
+        }
+    }
+</style>

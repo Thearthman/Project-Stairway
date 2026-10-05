@@ -69,6 +69,8 @@ module.exports = async (data) => {
     siteName: process.env.SITE_NAME_HEADER || "Digital Garden",
     mainLanguage: process.env.SITE_MAIN_LANGUAGE || "en",
     siteBaseUrl: baseUrl,
+    techtreeUrl:
+      process.env.TECHTREE_URL || "https://hkustech-tree.vercel.app",
     styleSettingsCss,
     buildDate: new Date(),
   };
